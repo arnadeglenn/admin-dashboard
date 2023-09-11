@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Titan+One&display=swap');
 
 :root {
-    --heading-font: 'Titan One', cursive;
+    --heading-font: 'Titan One', sans-serif;
     --body-font: 'Open Sans', sans-serif;
     --dark-green: #022c22;
     --mid-dark-green: #065f46;
@@ -17,7 +17,8 @@ body {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    background-color: var(--light-green);
+    background-color: var(--mid-green);
+    height: 100%;
 }
 
 .sidebar {
@@ -58,7 +59,7 @@ body {
 .header-body {
     background-color: var(--white-green);
     grid-column-start: 2;
-    height: 100%;
+    min-height: 100vh;
     width: auto;
     box-sizing: border-box;
     margin: 0px;
@@ -86,13 +87,13 @@ body {
 .posts {
     margin: 0px;
     box-sizing: border-box;
+    height: 100%;
 }
 
 .posts h1 {
-    background-color: lightblue;
     margin: 0px;
     box-sizing: border-box;
-    padding: 10px 10px 10px 40px;
+    padding: 10px 10px 0px 40px;
     font-family: var(--heading-font);
     color: var(--dark-green);
 }
@@ -100,11 +101,10 @@ body {
 .all-posts {
     grid-template: repeat(2, 1fr) / repeat(3, 1fr);
     column-gap: 30px;
-    row-gap: 70px;
+    row-gap: 60px;
     height: 100%;
     width: 100%;
     display: grid;
-    background-color: lightcoral;
     padding: 30px;
     box-sizing: border-box;
 }
@@ -115,6 +115,20 @@ body {
     display: grid;
     grid-template-columns: 1fr 25fr;
     overflow: hidden;
+    box-shadow: 0px 0px 6px var(--dark-green);
+}
+
+.notifications {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.announcements {
+    background-color: yellow ;
+}
+
+.trending {
+    background-color: peru;
 }
 
 .color-bar{
