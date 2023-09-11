@@ -184,13 +184,48 @@ h4 {
 
 .trending {
     display: grid;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 60px 1fr;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 
 .trending-box {
     background-color: white;
     border-radius: 20px;
     box-shadow: 0px 0px 6px var(--dark-green);
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 15px;
+    display: grid;
+    grid-template-rows: repeat(4, 25%);
+}
+
+.trending-box div {
+    display: flex;
+    gap: 10px;
+}
+
+.handles {
+    display: flex;
+    flex-direction: column;
+}
+
+.handles p {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: -10px 0px 0px 10px;
+
+    font-family: var(--body-font);
+}
+
+h5 {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: var(--heading-font);
+    font-size: 20px;
+    color: var(--mid-green);
 }
 
 h2 {
@@ -219,6 +254,12 @@ li {
 }
 
 .profile-mini {
+    height: 4rem;
+    width: auto;
+    border-radius: 50px;
+}
+
+.trending-image {
     height: 4rem;
     width: auto;
     border-radius: 50px;
